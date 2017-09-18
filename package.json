@@ -5,7 +5,7 @@
     "description": "FCC Advanced Front-End Project",
     "scripts": {
         "babel": "babel --presets es2015 src/app.js -o dist/bundle.js",
-        "start": "npm run webpack",
+        "start": "http-server",
         "watch": "webpack -d --watch"
     },
     "license": "MIT",

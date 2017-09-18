@@ -8,7 +8,7 @@ module.exports = {
         filename: './dist/bundle.js'
     },
     module: {
-        rules: [
+        loaders: [
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
@@ -20,5 +20,5 @@ module.exports = {
     stats: {
       colors: true
     },
-    devtool: 'eval'
+    devtool: 'source-map'
 };
