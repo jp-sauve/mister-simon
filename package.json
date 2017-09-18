@@ -6,11 +6,12 @@
     "scripts": {
         "deploy": "now",
         "build": "babel --presets env src/app.js -o dist/bundle.js",
-        "start": "NODE_ENV=production webpack",
+        "start": "http-server",
         "watch": "webpack -d --watch"
     },
     "license": "MIT",
     "dependencies": {
+        "http-server": "^0.10.0",
         "now": "^8.3.4"
     },
     "devDependencies": {
