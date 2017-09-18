@@ -4,15 +4,20 @@
     "private": true,
     "description": "FCC Advanced Front-End Project",
     "scripts": {
-        "babel": "babel --presets es2015 src/app.js -o dist/bundle.js",
-        "start": "npm run webpack",
+        "deploy": "now",
+        "build": "babel --presets env src/app.js -o dist/bundle.js",
+        "start": "NODE_ENV=production webpack",
         "watch": "webpack -d --watch"
     },
     "license": "MIT",
-    "dependencies": {},
+    "dependencies": {
+        "now": "^8.3.4"
+    },
     "devDependencies": {
+        "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.0",
         "webpack": "^3.6.0"
     }
 }

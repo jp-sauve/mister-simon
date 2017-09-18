@@ -5,20 +5,20 @@ module.exports = {
     entry: './src/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './dist/bundle.js'
+        filename: './bundle.js'
     },
     module: {
-        rules: [
+        loaders: [
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                query: {presets: ['es2015']}
+                query: {}
             }
         ]
     },
     stats: {
       colors: true
     },
-    devtool: 'eval'
+    devtool: 'source-map'
 };
